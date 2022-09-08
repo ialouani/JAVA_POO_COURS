@@ -1,0 +1,32 @@
+PREAMBULE:
+CIBLER les principaux objectifs de ce cours ; il y en a trois.
+On crée un code en fait 2 codes indépendants ; l'un correspond à la télécommande (fil rouge en C) et l'autre une porte charnière (code tests ~ code CLIENT qui va utiliser la télécommande pour mettre en oeuvre les fonctionnalitées de la télécommande.
+=>fichier telecommande.c et charnière.c ..
+Commencons par ecrire ces deux codes.
+(via des .h (interfaces publics et les réalisations (la privée ~ l'implémentation))).
+BUT: rendre ces deux codes indépendants...
+MAIS: la partie telecommande utilise surtout le code de charniere => dependance fonctionnelle. 
+MAIS²: ces deux parties sont independantes par rapport aux changements ; on peut changer les impléméntations via des appels fonctionnels, des ajout de pointeurs de fonctions dans la partie charniere pour disposer de l'approche generaliste objet mais sans changer le code client(les tests qui marchent toujours)<=>INDEPENDANCE.
+VOILA LES deux principes de ces 2 codes.
+=>test ok via une organisation automatisée : makefile.
+
+================================================================================================
+
+
+Objectif 1: Changer la réalisation sans modifier le code qui l'utilise:
+on dispose d'un client potentiellement un test qui va utiliser les fonctionnalitées des deux modules dependamment fonctionnellement mais independamment au niveau des deux modules representables ici EN C car la réalisation ne dépend pas de la facon fonctionnelle/structurelle de meme semantique dont on organise les deux fonctionnalitées dépendantes ; on dit que les modules naturellement les .h ne dépendent pas de la réalisation soit le code client , c'est presque le but numero 1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
